@@ -6,8 +6,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+th { 
+	
+}
+table{
+}
+</style>
 </head>
 <body>
+
 	<table>
 		<tr>
 			<th>id</th>
@@ -30,5 +38,6 @@
 			</tr>
 		</c:forEach>		
 	</table>
+
 </body>
 </html>

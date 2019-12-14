@@ -39,6 +39,7 @@ public class UserListService extends HttpServlet {
 		
 		UserService userService = new UserServiceImp();
 		List<User> userList = userService.finAll();
+		System.out.println(userList);
 		request.setAttribute("userList", userList);
 		request.getRequestDispatcher("list.jsp").forward(request, response);
 	}

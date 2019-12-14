@@ -5,6 +5,7 @@ package cn.edut.util;
 import java.beans.PropertyVetoException;
 import java.io.Closeable;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
@@ -17,20 +18,20 @@ public class JdbcUtils {
 	private static ComboPooledDataSource pool = null; 
 	
 	static {
+		InputStream in = Thread.class.getResourceAsStream("./main/resource/u_db.properties");
+		//TODO
 		//连接池
 		pool = new ComboPooledDataSource() ;
 		//加载配置
-		try {
-			pool.setDriverClass("com.mysql.jdbc.Driver");
-			pool.setJdbcUrl("jdbc:mysql://localhost:3306/u_db?characterEncoding=utf8");
-			pool.setUser("root");
-			pool.setPassword("root");
-		} catch (PropertyVetoException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally {
-			pool.close();
-		}
+		//		try {
+//			pool.setDriverClass("com.mysql.jdbc.Driver");
+//			pool.setJdbcUrl("jdbc:mysql://localhost:3306/u_db?characterEncoding=utf8");
+//			pool.setUser("root");
+//			pool.setPassword("root");
+//		} catch (PropertyVetoException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 	
 	public static Connection getConn() throws SQLException {

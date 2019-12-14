@@ -13,7 +13,7 @@
 	<div align="center">
 		<a 
 		
-			href="${pageContext.request.contextPath }/list.jsp" sytle="...">查询所有用户信息
+			href="${pageContext.request.contextPath }/UserListService" sytle="...">查询所有用户信息
 			
 		</a>
 	</div>
