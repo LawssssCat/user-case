@@ -12,32 +12,32 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import org.junit.Test;
+
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 public class JdbcUtils {
 	private static ComboPooledDataSource pool = null; 
-	
+
 	static {
-		InputStream in = Thread.class.getResourceAsStream("./main/resource/u_db.properties");
-		//TODO
 		//连接池
 		pool = new ComboPooledDataSource() ;
-		//加载配置
+		//加载配置 - c3p0.properties
 		//		try {
-//			pool.setDriverClass("com.mysql.jdbc.Driver");
-//			pool.setJdbcUrl("jdbc:mysql://localhost:3306/u_db?characterEncoding=utf8");
-//			pool.setUser("root");
-//			pool.setPassword("root");
-//		} catch (PropertyVetoException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		//			pool.setDriverClass("com.mysql.jdbc.Driver");
+		//			pool.setJdbcUrl("jdbc:mysql://localhost:3306/u_db?characterEncoding=utf8");
+		//			pool.setUser("root");
+		//			pool.setPassword("root");
+		//		} catch (PropertyVetoException e) {
+		//			// TODO Auto-generated catch block
+		//			e.printStackTrace();
+		//		}
 	}
-	
+
 	public static Connection getConn() throws SQLException {
 		return pool.getConnection() ;
 	}
-	
+
 	public static <T extends AutoCloseable> void close(T ... c) {
 		for (T t : c) {
 			if(t!=null) {

@@ -16,13 +16,13 @@ import cn.edut.service.imp.UserServiceImp;
 /**
  * Servlet implementation class TestServlet
  */
-public class UserListService extends HttpServlet {
+public class UserListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public UserListService() {
+	public UserListServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

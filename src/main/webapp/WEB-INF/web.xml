@@ -11,12 +11,12 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>UserListService</display-name>
-    <servlet-name>UserListService</servlet-name>
-    <servlet-class>cn.edut.web.servlet.UserListService</servlet-class>
+    <display-name>UserListServlet</display-name>
+    <servlet-name>UserListServlet</servlet-name>
+    <servlet-class>cn.edut.web.servlet.UserListServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>UserListService</servlet-name>
-    <url-pattern>/UserListService</url-pattern>
+    <servlet-name>UserListServlet</servlet-name>
+    <url-pattern>/UserListServlet</url-pattern>
   </servlet-mapping>
 </web-app>
