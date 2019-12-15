@@ -3,26 +3,11 @@ package cn.edut.domain;
 public class User {
 	private int id;
 	private String name ; 
-	private char gender ; 
+	private String gender ; 
 	private int age; 
 	private String address ;
 	private String qq ; 
 	private String email ;
-	
-	
-	
-	
-	
-	public User(int id, String name, char gender, int age, String address, String qq, String email) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.gender = gender;
-		this.age = age;
-		this.address = address;
-		this.qq = qq;
-		this.email = email;
-	}
 	public int getId() {
 		return id;
 	}
@@ -35,10 +20,10 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public char getGender() {
+	public String getGender() {
 		return gender;
 	}
-	public void setGender(char gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	public int getAge() {
@@ -65,10 +50,16 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public User(int id, String name, String gender, int age, String address, String qq, String email) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.gender = gender;
+		this.age = age;
+		this.address = address;
+		this.qq = qq;
+		this.email = email;
+	}
 	
-	
-	
-	
-	
-	
+
 }	
